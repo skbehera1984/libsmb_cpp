@@ -1,0 +1,56 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000216;13291300">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2><font color="#198A8A">void </font><a href="setDefaultBrowseServer.html">setDefaultBrowseServer</a>(<font color="#198A8A">const
+char</font> *serverName)</font>
+<br>
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+Use this to set the default browse server. This can be any SMB "master",
+and it is used for browsing. The point is that with NetBIOS, each machine
+send its registration on the network for the others to know it is alive
+(see RFC 1001-1002 for more details). As a client only, this library cannot
+receive these update informations and must depend on a SMB server for browsing
+operations.
+<br>The default is to use the local Samba, but you can use this library
+without Samba installed simply by choosing another browse server.
+<br>There are several problems involved with network-wide information,
+the main one is that every machine as its own vision of the world. On large
+SMB networks, it is possible that new elections are made (that's how masters
+are chosen) or that a machine crashes...
+<br>That's why the local Samba, or the chosen browse server, might not
+be up to date.
+<br>On such cases, the library automatically look for other known masters
+if any, so as to get relevant information. This doesn't change the browse
+server however, which is used as an entry point for the browsing process.
+<p>This function is mainly useful in native mode, but can also improve
+Samba performances if you specify here a domain controller.
+<p><i>serverName</i> is the NetBIOS name in ASCIIZ of the chosen browse
+server. Default is to use the local Samba if it exists
+<br>You can revert to the default, with a null serverName.
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

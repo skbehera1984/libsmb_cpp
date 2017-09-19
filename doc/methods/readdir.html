@@ -1,0 +1,61 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000204;13120900">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2>SMBdirent *<a href="readdir.html">readdir</a>(<font color="#198A8A">int</font>
+dirdesc)</font>
+<br>
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+This method returns information concerning the next entry for the directory
+corresponding to <i>dirdesc</i>.
+<br>A cache is used so as to improve performances.
+<p><i>dirdesc</i> is a directory descriptor corresponding to an already
+opened directory. This must be a descriptor returned by the library functions,
+and not by the standard ones.
+<p>As for standard readdir, the pointer returned shouldn't be fred by the
+user.
+<p>On error, 0 is returned and error() will return the corresponding error
+code.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">Opens a directory referenced by URL. Returns a directory
+descriptor.</font>
+<br><font color="#198A8A">int </font><a href="opendir.html">opendir</a>(<font color="#198A8A">const
+char</font> *name)
+<p><font color="#333333">Close the directory associated with this file
+descriptor</font>
+<br><font color="#198A8A">int </font><a href="closedir.html">closedir</a>(<font color="#198A8A">int</font>
+dirdesc)
+<p><font color="#333333">Position the position pointer for this directory
+descriptor. Returns -1 on error.</font>
+<br><font color="#198A8A">int </font><font color="#333333"><a href="rewinddir.html">rewinddir</a>(</font><font color="#198A8A">int</font><font color="#333333">
+dirdesc)Specify a callback for retreiving password and user name</font>
+<p><font color="#333333">This class replaces the structure dirent, and
+provides more useful fields</font>
+<br><font color="#198A8A">class </font><a href="SMBdirent.html">SMBdirent</a>
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000204;12462000">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2><font color="#198A8A">int</font> <a href="write.html">write</a>(<font color="#198A8A">int</font>
+fd, <font color="#198A8A">void</font> *buf, <font color="#198A8A">uint32</font>
+count)</font>
+<br>
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+This function basically acts as its standard equivalent, except that it
+caches the data so as to improve performances.
+<p><i>fd</i> is a file descriptor corresponding to an already opened file.
+This must be a descriptor returned by the library functions, and not by
+the standard ones.
+<p><i>buf</i> is a buffer provided by the user. It should contain the data
+to write.
+<p><i>count</i> is the maximum number of bytes this function should try
+to write.
+
+<p STYLE="margin-bottom: 0.00cm">The number of bytes written is returned.
+<br>On error, -1 is returned and error() will return the corresponding
+error code.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">Reads from an "opened" file descriptor. Does caching.</font>
+<br><font color="#198A8A">int</font><a href="read.html">read</a>(<font color="#198A8A">int</font>
+fd,
+<font color="#198A8A">void</font> *buf, <font color="#198A8A">uint32</font>
+count)
+<p><font color="#333333">Flush forces a write of all buffered data for
+the given fd</font>
+<br><font color="#198A8A">int</font> <a href="flush.html">flush</a>(<font color="#198A8A">int</font>
+fd)
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

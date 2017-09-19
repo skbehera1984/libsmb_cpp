@@ -1,0 +1,48 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000216;13452900">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2><font color="#198A8A">struct</font> hostent *<a href="gethostbyname.html">gethostbyname</a>(<font color="#198A8A">const
+char</font> *name)</font>
+<br>
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+Works as its standard equivalent, but with NetBIOS names.
+<br>If DNS lookup was specified for native mode at compile time, and there
+is a name conflict, NetBIOS name will be used first.
+<br>Samba uses its own resolution scheme, which is called by the library
+in Samba mode.
+<p><i>name</i> is the NetBIOS name of the machine to seek in ASCIIZ.
+<p>On error, or if the host doesn't exist, 0 is returned. The error() function
+can be used.
+<br>Otherwise, the hostent structure is managed by the library, so you
+should not try to delete it.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">man gethostbyname</font>
+<p><font color="#333333">man smb.conf</font>
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

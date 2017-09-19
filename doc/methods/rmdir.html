@@ -1,0 +1,52 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000204;18361800">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2><font color="#198A8A">int </font><a href="rmdir.html">rmdir</a>(<font color="#198A8A">const
+char</font> *pathname)</font>
+<br>
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+This function will remove the directory <i>pathname</i> if it exists.
+<br>Notes :
+<br>&nbsp;&nbsp;&nbsp; . The directory must be empty for this function
+to succeed, and of course it's not possible to remove a workgroup, host
+or share !
+<br>&nbsp;&nbsp;&nbsp; . The SMB server must have permission to delete
+the directory.
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p><i>pathname</i> is the URL of the directory to destroy.
+<p>This function returns 0 on success and -1 on error with error() returning
+the corresponding error code.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">Creates a directory with URL pathname</font>
+<br><font color="#198A8A">int </font><font color="#333333"><a href="mkdir.html">mkdir</a>(</font><font color="#198A8A">const
+char</font><font color="#333333"> *pathname)</font>
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

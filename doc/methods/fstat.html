@@ -1,0 +1,50 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000204;13070500">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2><font color="#198A8A">int</font> <a href="fstat.html">fstat</a>(<font color="#198A8A">int</font>
+fd, <font color="#198A8A">struct</font> stat *buf)</font>
+<br>
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+This function is used to get information about a file or directory descriptor.
+<p><i>fd</i> is an already opened file or directory descriptor. This must
+be a descriptor returned by the library functions, and not by the standard
+ones.
+<p><i>buf</i> points to a stat structure allocated by the user, which will
+contain information about the URL.
+<p>All the standard macros (ISDIR, ...) work fine on the resulting buffer.
+This method performs some conversions between DOS attributes and Unix permissions.
+<p>This function returns 0 on success and -1 on error with error() returning
+the corresponding error code.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">Stats a file/directory. URLs are accepted. Works
+as its standard equivalent.</font>
+<br><font color="#198A8A">int </font><a href="stat.html">stat</a>(<font color="#198A8A">const
+char</font> *filename, <font color="#198A8A">struct</font> stat *buf)
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

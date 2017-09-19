@@ -1,0 +1,52 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000204;13121900">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2><font color="#198A8A">int </font><a href="closedir.html">closedir</a>(<font color="#198A8A">int</font>
+dirdesc)</font>
+<br>
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+<i>dirdesc</i> is the directory descriptor that must be closed.
+<br>It should have previously been opened by a library function.
+<p>This function returns 0 on success and -1 on error with error() returning
+the corresponding error code.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">Opens a directory referenced by URL. Returns a directory
+descriptor.</font>
+<br><font color="#198A8A">int </font><a href="opendir.html">opendir</a>(<font color="#198A8A">const
+char</font> *name)
+<p><font color="#333333">Reads from an "opened" directory descriptor. Does
+caching.</font>
+<br>SMBdirent *<a href="readdir.html">readdir</a>(<font color="#198A8A">int</font>
+dirdesc)
+<p><font color="#333333">Position the position pointer for this directory
+descriptor.</font>
+<br><font color="#198A8A">int </font><a href="rewinddir.html">rewinddir</a>(<font color="#198A8A">int</font>
+dirdesc)
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000216;13493900">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2><font color="#198A8A">class </font><a href="SMBdirent.html">SMBdirent</a></font>
+<br>
+<hr>
+<h2>
+<i><u><font color="#000080">Class Description</font></u></i></h2>
+<font color="#198A8A">class</font> SMBdirent : <font color="#FF00FF">public</font>
+stat
+<br>{
+<br><font color="#FF00FF">public</font>:
+<br><font color="#999999">// name of the directory entry</font>
+<br>&nbsp;&nbsp;&nbsp; <font color="#198A8A">char</font> *d_name;
+<br><font color="#999999">// Constructor and destructor</font>
+<br>&nbsp;&nbsp;&nbsp; SMBdirent();
+<br>&nbsp;&nbsp;&nbsp; ~SMBdirent();
+<br>};
+<p>This class inherits the stat structure, so it contains all the st_xxxx
+fields.
+<br>It has been created because the SMB servers can return this information
+in addition to d_name, so we don't waste them.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">Reads from an "opened" directory descriptor. Does
+caching.</font>
+<br>SMBdirent *<a href="readdir.html">readdir</a>(<font color="#198A8A">int</font>
+dirdesc)
+<p><font color="#333333">man stat</font>
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

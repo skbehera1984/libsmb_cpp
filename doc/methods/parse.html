@@ -1,0 +1,64 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000214;11135800">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<p><font size=+2><font color="#198A8A">void <a href="parse.html">parse</a></font><font color="#000000">(</font><font color="#198A8A">const
+char</font><font color="#000000"> *name, </font><font color="#198A8A">bool</font><font color="#000000">
+interpretDirs = </font><font color="#0000FF">true</font><font color="#000000">)</font></font>
+<br>
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+Use this method to parse an URL. The advantage of using this instead of
+your own routine is that :
+<br>&nbsp;&nbsp;&nbsp; . You don't have to reinvent the wheel
+<br>&nbsp;&nbsp;&nbsp; . This function uses internal library variables
+so as to determine whether 'smb://foo' represents a host or a workgroup.
+<p>The following format are accepted :
+<br>&nbsp;&nbsp;&nbsp; . smb://user:password@workgroup/host/share/path
+<br>&nbsp;&nbsp;&nbsp; . smb://user:password@host:IP/share/path
+<br>&nbsp;&nbsp;&nbsp; . \\host\share\path
+<p>You can omit any field, so long as there is no confusion. For example
+opendir("smb://") is a virtual directory that contains the list of workgroups,
+but "smb://share/path" is invalid (or rather, it will not do what you expect).
+<p><i>name</i> should contain the URL to parse in ASCIIZ.
+<p><i>interpretDirs</i> should be set to true (default) if you want the
+library to interpret "." and ".." as special directories.
+<p>You can get the parsed results using the corresponding functions. For
+example, user() will return the user component of the last parsed URL.
+Unlike the previous versions of libsmb, you should not delete those results.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">Does the opposite of the parser</font>
+<br><font color="#198A8A">char</font> *<a href="buildURL.html">buildURL</a>(<font color="#198A8A">const
+char</font>* user=<font color="#0000FF">0</font>, <font color="#198A8A">const
+char</font>* password=<font color="#0000FF">0</font>, <font color="#198A8A">const
+char</font>* workgroup=<font color="#0000FF">0</font>, <font color="#198A8A">const
+char</font> *host=<font color="#0000FF">0</font>, <font color="#198A8A">const
+char</font>* share=<font color="#0000FF">0</font>, <font color="#198A8A">const
+char</font>* path=<font color="#0000FF">0</font>, <font color="#198A8A">const
+char</font>* ip=<font color="#0000FF">0</font>)
+<br>
+<hr>
+<div align=right>
+<p><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu, 1999 - 2000</font></i></div>
+
+</body>
+</html>

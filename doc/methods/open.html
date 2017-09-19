@@ -1,0 +1,68 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; SunOS 5.7 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="Brodu Nicolas">
+   <meta name="CREATED" content="19990523;22460100">
+   <meta name="CHANGEDBY" content="Brodu Nicolas">
+   <meta name="CHANGED" content="20000204;12450300">
+<style>
+	<!--
+		A:link { color: #ee1100 }
+		A:visited { color: #aa0000 }
+	-->
+	</style>
+</head>
+<body bgcolor="#FFFFFF" link="#EE1100" vlink="#AA0000">
+
+<center><img SRC="onLineDoc.jpg" NAME="Graphic1" BORDER=0 height=40 width=599 align=BOTTOM></center>
+
+<hr>
+<h2>
+<font size=+2><font color="#198A8A">int </font><a href="open.html">open</a>(<font color="#198A8A">const
+char</font>* file="", <font color="#198A8A">int</font> flags=O_RDWR, <font color="#198A8A">int</font>
+mode=<font color="#0000FF">0644</font>)</font></h2>
+
+<hr>
+<h2>
+<a NAME="method list"></a><i><u><font color="#000080">Method Description</font></u></i></h2>
+This function basically acts as its standard equivalent.
+<p><i>file</i> is the file name to open, relative to the current share
+or with the full URL specified.
+<p><i>flags</i> is a logical 'or' combination of flags. Valid flags are
+:
+<br>&nbsp;&nbsp;&nbsp; O_RDONLY : Opens the file read-only.
+<br>&nbsp;&nbsp;&nbsp; O_WRONLY : Opens the file write-only.
+<br>&nbsp;&nbsp;&nbsp; O_RDWR : Opens for reading and writing.
+<br>&nbsp;&nbsp;&nbsp; O_CREAT : If the file doesn't exist, it will be
+created.
+<br>&nbsp;&nbsp;&nbsp; O_TRUNC : If the file already exists, it is truncated.
+<br>&nbsp;&nbsp;&nbsp; O_EXCL : Useful together with O_CREAT only. If the
+file did already exist, an error is returned.
+<br>&nbsp;&nbsp;&nbsp; O_APPEND : The file position pointer is placed atr
+the end of the file.
+<br>Other flags are ignored.
+<p><i>mode</i> should specify the permissions of the file if a new file
+is created. The flag isn't used at present, and anyway since Unix permissions
+must be mapped to DOS attributes, this parameter isn't very relevant.
+<p>This method returns a file descriptor, which can be used only for this
+library functions. Do not use standard functions with these descriptors.
+<br>On error, -1 is returned and error() will return the corresponding
+error code.
+<h2>
+<i><u><font color="#000080">See also :</font></u></i></h2>
+<font color="#333333">Create a file. URLs are accepted. Works as its standard
+equivalent.</font>
+<br><font color="#198A8A">int </font><a href="creat.html">creat</a>(<font color="#198A8A">const
+char</font>* file="", <font color="#198A8A">int</font> mode=<font color="#0000FF">0644</font>)
+<p><font color="#333333">Close the file associated with this file descriptor</font>
+<br><font color="#198A8A">int</font> <a href="close.html">close</a>(<font color="#198A8A">int</font>
+fd)
+<br>
+<hr>
+<div align=right><i><font color="#4C4C4C">Copyright &copy; Nicolas Brodu,
+1999 - 2000</font></i></div>
+
+</body>
+</html>
